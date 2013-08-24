@@ -621,7 +621,7 @@ static int upload_progress_init(apr_pool_t *p, apr_pool_t *plog,
 #  if AP_SERVER_MAJORVERSION_NUMBER == 2 && AP_SERVER_MINORVERSION_NUMBER >= 4
         result = ap_unixd_set_global_mutex_perms(config->cache_lock);
 #  else
-	result = unixd_set_global_mutex_perms(config->cache_lock);
+        result = unixd_set_global_mutex_perms(config->cache_lock);
 #  endif
         if (result != APR_SUCCESS) {
             ap_log_error(APLOG_MARK, APLOG_CRIT, result, s,
